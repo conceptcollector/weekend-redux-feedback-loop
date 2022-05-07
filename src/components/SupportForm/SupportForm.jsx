@@ -2,31 +2,31 @@ import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 
-function UnderstandingForm() {
+function SupportForm() {
 
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [understanding, setUnderstanding] = useState('');
+    const [support, setSupport] = useState('');
 
     const handleSubmission = (e) => {
         e.preventDefault();
         dispatch({
             type: 'ADD_TO_REVIEW',
-            payload: understanding
+            payload: support
         })
-        history.push('/SupportForm');
+        history.push('/CommentForm');
   }
 
     return (
         <div className='App'>
-            <h1>How well are you understanding the content?</h1>
+            <h1>How well are you being supported?</h1>
             <form onSubmit={handleSubmission}>
                 <input
                     required
                     placeholder="0-6"
-                    value={understanding}
-                    onChange={(event) => setUnderstanding(event.target.value)}
+                    value={support}
+                    onChange={(event) => setSupport(event.target.value)}
                 />
                     <button>Next</button>
             </form>
@@ -34,4 +34,4 @@ function UnderstandingForm() {
     )
 }
 
-export default UnderstandingForm;
+export default SupportForm;

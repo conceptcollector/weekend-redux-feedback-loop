@@ -7,7 +7,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 
-const summaryReducer = (state = [], action) => {
+const reviewReducer = (state = [], action) => {
     if (action.type === 'ADD_TO_SUMMARY') {
         return [...state, action.payload];
     }
@@ -16,7 +16,7 @@ const summaryReducer = (state = [], action) => {
 
 const storeInstance = createStore(
     combineReducers({
-      summaryReducer
+      reviewReducer
     }),
     applyMiddleware(logger),
   );
