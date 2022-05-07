@@ -38,4 +38,15 @@ if (process.env.DATABASE_URL) {
     };
 }
 
+const pool = new pg.Pool(config);
+
+pool.on('connect', () => {
+  console.log('Postgesql connected');
+});
+
+pool.on('error', (error) => {
+  console.log('Unexpected error on idle client', error);
+  process.exit(-1);
+});
+
 module.exports = new pg.Pool(config);

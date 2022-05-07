@@ -8,7 +8,7 @@ import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 
 const reviewReducer = (state = [], action) => {
-    if (action.type === 'ADD_TO_SUMMARY') {
+    if (action.type === 'ADD_TO_REVIEW') {
         return [...state, action.payload];
     }
     return state;
