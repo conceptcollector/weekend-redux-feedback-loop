@@ -4,14 +4,14 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import { Provider } from 'react-redux';
 
-const summary = [{
-}];
-
-const summaryReducer = (state = summary, action) => {
+const summaryReducer = (state = [], action) => {
     if (action.type === 'ADD_TO_SUMMARY') {
         return [...state, action.payload];
     }
+    return state;
 }
 
 const storeInstance = createStore(
