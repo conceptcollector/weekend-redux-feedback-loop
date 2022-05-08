@@ -1,5 +1,5 @@
 import {useHistory} from 'react-router-dom';
-import { useSelector } from "react-redux";
+import {useSelector} from "react-redux";
 import axios from "axios";
 
 function Review() {
@@ -24,10 +24,10 @@ function Review() {
     return (
         <>
             <h1>Feedback Review</h1>
-            <p>Feelings: {feedback[0]}</p>
-            <p>Understanding: {feedback[1]}</p>
-            <p>Support: {feedback[2]}</p>
-            <p>Comments: {feedback[3]}</p>
+            <h3>Feelings: {feedback[0]}</h3>
+            <h3>Understanding: {feedback[1]}</h3>
+            <h3>Support: {feedback[2]}</h3>
+            <h3>Comments: {feedback[3]}</h3>
             <button onClick={submitFeedback}>Submit</button>
         </>
     )

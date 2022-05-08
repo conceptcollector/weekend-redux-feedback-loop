@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -13,7 +14,6 @@ const reviewReducer = (state = [], action) => {
     } else if (action.type === 'NEW_FEEDBACK') {
         return [];
     }
-    console.log(state);
     return state;
 }
 

@@ -23,7 +23,6 @@ function CommentForm() {
             <h1>Any comments you want to leave?</h1>
             <form onSubmit={handleSubmission}>
                 <input
-                    required
                     placeholder="comments"
                     value={comments}
                     onChange={(event) => setComments(event.target.value)}
