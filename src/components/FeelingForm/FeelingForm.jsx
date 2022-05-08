@@ -27,7 +27,7 @@ function FeelingForm() {
                     placeholder="0-6"
                     value={feeling}
                     onChange={(event) => setFeeling(event.target.value)}
-                />   
+                />
             <button>Next</button>
             </form>
         </>

@@ -19,7 +19,7 @@ function UnderstandingForm() {
   }
 
     return (
-        <div className='App'>
+        <>
             <h1>How well are you understanding the content?</h1>
             <form onSubmit={handleSubmission}>
                 <input
@@ -30,7 +30,7 @@ function UnderstandingForm() {
                 />
                     <button>Next</button>
             </form>
-        </div>
+        </>
     )
 }
 

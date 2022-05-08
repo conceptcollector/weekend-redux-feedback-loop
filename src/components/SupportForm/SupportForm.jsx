@@ -19,7 +19,7 @@ function SupportForm() {
   }
 
     return (
-        <div className='App'>
+        <>
             <h1>How well are you being supported?</h1>
             <form onSubmit={handleSubmission}>
                 <input
@@ -30,7 +30,7 @@ function SupportForm() {
                 />
                     <button>Next</button>
             </form>
-        </div>
+        </>
     )
 }
 
