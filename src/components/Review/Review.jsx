@@ -1,9 +1,11 @@
+import {useHistory} from 'react-router-dom';
 import { useSelector } from "react-redux";
 import axios from "axios";
 
 function Review() {
 
     const feedback = useSelector(store => store.reviewReducer);
+    const history = useHistory();
 
     const submitFeedback = () => {
         console.log(feedback);
@@ -16,6 +18,7 @@ function Review() {
         }).catch((error) => {
             console.log('Something failed POSTing to the database', error);
         })
+        history.push('/ThankYouPage');
     }
 
     return (

@@ -5,6 +5,7 @@ import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportForm from '../SupportForm/SupportForm';
 import CommentForm from '../CommentForm/CommentForm';
 import Review from '../Review/Review';
+import ThankYouPage from '../ThankYouPage/ThankYouPage';
 
 function App() {
 
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route exact path="/Review">
           <Review />
+        </Route>
+        <Route exact path="/ThankYouPage">
+          <ThankYouPage />
         </Route>
       </div>
     </Router>

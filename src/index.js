@@ -10,7 +10,10 @@ import { Provider } from 'react-redux';
 const reviewReducer = (state = [], action) => {
     if (action.type === 'ADD_TO_REVIEW') {
         return [...state, action.payload];
+    } else if (action.type === 'NEW_FEEDBACK') {
+        return [];
     }
+    console.log(state);
     return state;
 }
 
